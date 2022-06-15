@@ -37,9 +37,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+        r = event.message.text
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='允仲好帥'))
 
 
 if __name__ == "__main__":
