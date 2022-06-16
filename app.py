@@ -43,12 +43,13 @@ def handle_message(event):
             s = '你好'
         elif '飯' in msg:
             s = '還沒'
-        elif msg == '你是誰':
+        elif msg == '你是誰':r
             s = '我是帥哥'
         elif '愛你' in msg:
             sticker_message = StickerSendMessage(
-            package_id='1',
-            sticker_id='1')
+                package_id='1',
+                sticker_id='1'
+            )
             return
 
             line_bot_api.reply_message(
